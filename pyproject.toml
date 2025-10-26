@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-extractor"
+dynamic = ["version"]
+description = "A powerful Python tool to extract images from PDF, Word, and PowerPoint files"
+authors = [
+    {name = "Amin", email = "your-email@example.com"},
+]
+keywords = ["image", "extractor", "pdf", "word", "powerpoint"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pillow>=10.0.0",
+    "pypdf>=4.0.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black",
+    "flake8",
+    "mypy",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/image-extractor"
+"Bug Reports" = "https://github.com/yourusername/image-extractor/issues"
+"Documentation" = "https://github.com/yourusername/image-extractor/wiki"
+
+[project.scripts]
+image-extractor-cli = "src.cli_extractor:main"
+image-extractor-gui = "src.gui_extractor:main"
+
+[tool.setuptools_scm]
+write_to = "src/_version.py"
