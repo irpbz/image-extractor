@@ -33,16 +33,16 @@ A powerful and user-friendly Python application for extracting images from PDF, 
 pip install -r requirements.txt
 
 # Usage
-# Graphical User Interface (Recommended for beginners):
+## Graphical User Interface (Recommended for beginners):
 
 python src/gui_extractor.py
 
-# Command Line Interface (For advanced users & automation):
+## Command Line Interface (For advanced users & automation):
 
-# Basic usage
+## Basic usage
 python src/cli_extractor.py "path/to/your/file.pdf"
 
-# Example with different file types
+## Example with different file types
 python src/cli_extractor.py "document.docx"
 python src/cli_extractor.py "presentation.pptx"
 
